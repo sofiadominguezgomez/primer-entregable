@@ -1,3 +1,4 @@
+import { useState } from 'react'
 // El componente App es el padre de:
 // - Cabecera
 // - Listado
@@ -11,13 +12,13 @@ import Listado from './components/Listado'
 
 function App() {
 
-
-  //console.log(productos.map( (i) => console.log(i) ))
-
+  const [comprados, setComprados] = useState(0)
+  const handleAddition = () => setComprados(comprados+1)
+  
   return (
     <div className="App">
-      <Cabecera  />
-      <Listado />
+      <Cabecera  comprados={comprados} />
+      <Listado handleAddition={handleAddition} />
     </div>
   );
 }

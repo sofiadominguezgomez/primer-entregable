@@ -9,14 +9,14 @@ import data from './data.json'
 // MÉTODOS: Listado no requiere de métodos.
 // PROPS: Listado recibe el método para aumentar el estado de App y se lo pasa a cada uno de sus hijos.
 
-export default function Listado() {
+export default function Listado({handleAddition}) {
   const productos = JSON.parse(JSON.stringify(data))
   
   return (
     <div className='container'>
       {
         productos.map( 
-          (i) => <Item key={i.id} nombre={i.producto.nombre} descripcion={i.producto.descripcion} stock={i.stock} />
+          (i) => <Item key={i.id} nombre={i.producto.nombre} descripcion={i.producto.descripcion} stock={i.stock} handleAddition={handleAddition} />
        )
       }
     </div>
