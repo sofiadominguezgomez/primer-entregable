@@ -13,10 +13,11 @@ export default function Cabecera() {
   return (
     <header>
       <h1>Carrito de compras</h1>
-      <p>Cantidad de productos</p>
-      <span>
+      <p>Cantidad de productos: <span> Hacer!
         {/* maquetar Cabecera aquí */}
-      </span>
+      </span> 
+      </p>
+      
         
     </header>
   )
