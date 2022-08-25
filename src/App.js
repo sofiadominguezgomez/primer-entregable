@@ -8,11 +8,15 @@ import Cabecera from './components/Cabecera'
 import Listado from './components/Listado'
 
 
+
 function App() {
+
+
+  //console.log(productos.map( (i) => console.log(i) ))
 
   return (
     <div className="App">
-      <Cabecera />
+      <Cabecera  />
       <Listado />
     </div>
   );
