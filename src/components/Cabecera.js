@@ -14,7 +14,7 @@ export default function Cabecera({comprados}) {
     <header>
       <h1>Carrito de compras</h1>
       <p>Cantidad de productos: <span> 
-        {comprados}
+        {comprados-1}
       </span> 
       </p>
       

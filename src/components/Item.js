@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 // El componente Item no tiene componentes hijos.
 // ESTADO: Item debe tener un número para almacenar la cantidad de stock, la misma se la defina el padre a la hora de crearlo.
 // MÉTODOS: Item debe manejar el click de su boton para restar la cantidad en stock de sí mismo y a su vez poder aumentar el estado de su "abuelo" App.
@@ -13,22 +13,32 @@ export default function Item({nombre, descripcion, stock, handleAddition}) {
 
   const [count, setcount] = useState(stock)
   const [availability, setAvailability] = useState(true)
+
+  const resta = () => count > 1 ? setcount(count-1) && handleAddition()  : setAvailability(false) ;
  
   const manejador = () => {
+    console.log("El stock es " + stock)
+    console.log( "La cuenta es " + count)
     if (count > 0) {
       setcount(count-1) 
-      handleAddition()
+      console.log( "La cuenta es " + count)
+      
     } else {
       setAvailability(false)
     }
   }
+
+  useEffect( () => {    
+    handleAddition()
+
+  }, [count] )
 
   return (
     <div className='producto'>
       <h3>{nombre}</h3>
       <p>{descripcion}</p>
       <h5>En stock: <span> {availability ? count : "Agotado"} </span>  </h5> 
-      <button disabled={!availability} onClick={manejador}> Comprar </button>
+      { <button disabled={!availability} onClick={ manejador }> Comprar </button> }
     </div>
   )
 }

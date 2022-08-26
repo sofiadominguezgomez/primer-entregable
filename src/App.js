@@ -14,7 +14,7 @@ function App() {
 
   const [comprados, setComprados] = useState(0)
   const handleAddition = () => setComprados(comprados+1)
-  
+
   return (
     <div className="App">
       <Cabecera  comprados={comprados} />
