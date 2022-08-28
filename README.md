@@ -18,5 +18,5 @@ Se hace manejo de estado en componentes funcionales mediante state y setState, u
 
 ---
 
-Project deployed with [GitHub Pages](Agregar)
+Project deployed with [GitHub Pages](https://sofiadominguezgomez.github.io/primer-entregable)
 
