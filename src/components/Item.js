@@ -13,6 +13,7 @@ import { useEffect, useState } from "react"
 export default function Item({nombre, descripcion, stock, handleAddition}) {
 
   const [count, setCount] = useState(stock)
+  const isStock = count > 0 ? true : false;
 
   useEffect( () => {    
     handleAddition()
@@ -22,11 +23,12 @@ export default function Item({nombre, descripcion, stock, handleAddition}) {
     <div className='producto'>
       <h3>{nombre}</h3>
       <p>{descripcion}</p>
-      <h5>En stock: <span> {count > 0 ? count : "Agotado"} </span>  </h5> 
+      <h5>En stock: <span> {isStock ? count : "Agotado"} </span>  </h5> 
       {count > 0
       ? <button onClick={() => setCount(count-1)} >Comprar</button>
-      : <button disabled={true}>Comprar</button>
+      : <button disabled={true} >Comprar</button>
       }
+      
 
     </div>
   )

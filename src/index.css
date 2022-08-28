@@ -29,7 +29,7 @@ header p span {
 
 .container {
   padding: 20px 40px;
-  display: flex;
+  display: flex ;
   flex-direction: row;
   gap: 30px;
 }
@@ -39,7 +39,7 @@ header p span {
   padding: 20px;
   width: 33%;
   border-radius: 5px;
-  display: flex;
+  display: flex ;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
