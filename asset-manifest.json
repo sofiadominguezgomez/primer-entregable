@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/primer-entregable/static/css/main.fe57c324.css",
+    "main.js": "/primer-entregable/static/js/main.87dcd6b5.js",
+    "index.html": "/primer-entregable/index.html",
+    "main.fe57c324.css.map": "/primer-entregable/static/css/main.fe57c324.css.map",
+    "main.87dcd6b5.js.map": "/primer-entregable/static/js/main.87dcd6b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe57c324.css",
+    "static/js/main.87dcd6b5.js"
+  ]
+}
