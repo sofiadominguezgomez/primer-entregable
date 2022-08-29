@@ -24,7 +24,7 @@ export default function Item({nombre, descripcion, stock, handleAddition}) {
       <h3>{nombre}</h3>
       <p>{descripcion}</p>
       <h5>En stock: <span> {isStock ? count : "Agotado"} </span>  </h5> 
-      {count > 0
+      {isStock
       ? <button onClick={() => setCount(count-1)} >Comprar</button>
       : <button disabled={true} >Comprar</button>
       }
